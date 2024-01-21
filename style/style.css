@@ -1,0 +1,191 @@
+.stars {
+    background: url(../img/stars.jpg) center repeat;
+    /* background-size: cover; */
+    background-size: 90%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -100;
+    animation: rotate 350s linear infinite;
+}
+
+.sun {
+    width: 200px;
+    height: 200px;
+    background: url(../img/sun.jpg);
+    position: relative;
+    animation: rotate 100s linear infinite;
+    box-shadow: -0.3px -0.3px 32.3px #ccc;
+
+
+
+
+}
+
+.mercury {
+    background: url(../img/mercury.jpg);
+    box-shadow: inset -3px -3px 3px #000, -1px -1px 1px #ccc;
+    width: 13px;
+    height: 13px;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 3s linear infinite,
+        mercury 5s infinite ease-in-out;
+    position: relative;
+
+}
+
+.venus {
+    background: url(../img/venux.jpg);
+    box-shadow: inset -4px -4px 4px #000, -1px -1px 1px #ccc;
+    width: 13px;
+    height: 13px;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 8s linear infinite,
+        venus 8s infinite ease-in-out;
+    position: relative;
+}
+
+.earth {
+    background: url(../img/earth.jpg);
+    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    width: 20px;
+    height: 20px;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite,
+        earth 15s infinite ease-in-out;
+    position: relative;
+
+}
+
+
+
+.moon {
+    background: url(../img/moon.jpg);
+    box-shadow: inset -2px -2px 2px #000, -0.3px -0.3px 0.3px #ccc;
+    width: 6px;
+    height: 6px;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: satellite 5s linear infinite,
+        moon 2s infinite ease-in-out;
+    position: relative;
+}
+
+.venus,
+.sun,
+.earth,
+.moon,
+.mercury {
+    border-radius: 50%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+}
+
+
+
+
+
+@keyframes rotate {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+
+
+@keyframes earth {
+    49% {
+
+        z-index: 2;
+    }
+
+    50% {
+        left: 280px;
+        z-index: -1;
+    }
+
+    99% {
+        z-index: -1;
+    }
+
+    100% {
+        left: -80px;
+        z-index: 2;
+    }
+
+}
+
+@keyframes moon {
+    49% {
+        z-index: 10;
+    }
+
+    50% {
+        left: 25px;
+        z-index: -22;
+    }
+
+    99% {
+        z-index: -22;
+    }
+
+    100% {
+        left: -10px;
+        z-index: 10;
+    }
+
+}
+
+
+
+@keyframes mercury {
+    49% {
+        /* left: -40px; */
+        z-index: 4;
+    }
+
+    50% {
+        left: 210px;
+        z-index: -3;
+    }
+
+    99% {
+        z-index: -3;
+    }
+
+    100% {
+        left: -45px;
+        z-index: 4;
+    }
+
+}
+
+@keyframes venus {
+    49% {
+        z-index: 14;
+    }
+
+    50% {
+        left: 240px;
+        z-index: -1;
+    }
+
+    99% {
+        z-index: -1;
+    }
+
+    100% {
+        left: -60px;
+        z-index: 14;
+    }
+
+}
